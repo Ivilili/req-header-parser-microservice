@@ -15,8 +15,7 @@ app.get('/', function(req, res) {
 	res.sendFile(__dirname + '/views/index.html');
 });
 
-app.get('/api/whoami', function(req, res, next) {
-	var header = req.headers;
+app.get('/api/whoami', function(req, res) {
 	var ip = req.headers.host;
 	var lang = req.headers['accept-language'];
 	var software = 'OS: ' + req.useragent.os + ', Browser: ' + req.useragent.browser;
